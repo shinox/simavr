@@ -17,6 +17,12 @@ On OSX, we recommend using [homebrew](https://brew.sh):
     brew tap osx-cross/avr
     brew install --HEAD simavr
 
+FreeBSD,
+
+    Makefile.common change line 44 to: -Wno-sign-compare -I/usr/local/include
+    Changed examples/parts/uart_pty.c to include required headers
+    Build using `gmake` as usual
+
 Otherwise, `make` is enough to just start using __bin/simavr__. To install the __simavr__ command system-wide, `make install RELEASE=1`.
 
 Supported IOs
